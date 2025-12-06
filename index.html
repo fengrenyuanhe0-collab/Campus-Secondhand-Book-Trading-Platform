@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Campus Secondhand Book Trading Platform</title>
+
+  <!-- 推荐字体：优先使用本地 SF Pro（你若有本地字体），否则回退到 Inter -->
+  <style>
+    @font-face {
+      font-family: "SF Pro";
+      /* 如果你有 SF Pro 的本地文件，可以把它放到 assets/fonts/ 并取消下面注释
+         src: url("assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2");
+      */
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    /* Google font fallback - Inter */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+    :root{
+      --title-color: #071a3a;
+      --accent: #2b6cff;
+      --enter-bg: #ffb84d;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+    }
+
+    /* full-bleed background image */
+    body{
+      font-family: "SF Pro", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: center/cover no-repeat url("assets/img/background.jpg");
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--title-color);
+    }
+
+    /* Container: directly over background, no big white blurred box */
+    .landing-wrap{
+      text-align:center;
+      padding: 36px 28px;
+      /* subtle translucent strip behind text (small pill), not big blurred box */
+      background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.06));
+      border-radius: 16px;
+      backdrop-filter: none; /* remove blur */
+      max-width: 920px;
+      width: calc(100% - 48px);
+      box-shadow: 0 8px 30px rgba(7, 26, 58, 0.12);
+    }
+
+    /* Logo: force circular display */
+    .landing-logo{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+      margin:0 auto 18px;
+      border: 3px solid rgba(255,255,255,0.85); /* crisp white ring */
+      box-shadow: 0 6px 18px rgba(3,10,30,0.18);
+      background-color: #fff; /* in case image has transparency */
+    }
+
+    /* Title exactly as you wrote */
+    .landing-title{
+      font-size:36px;
+      line-height:1.05;
+      margin: 6px 0 6px;
+      font-weight:800;
+      color: var(--title-color);
+      letter-spacing: -0.4px;
+    }
+
+    /* Slogan smaller and lighter */
+    .landing-slogan{
+      font-size:18px;
+      margin-bottom:22px;
+      color: rgba(7,26,58,0.78);
+      font-weight:400;
+    }
+
+    /* Enter button: large pill, rounded more to match figma */
+    .enter-btn{
+      display:inline-block;
+      padding:14px 56px;
+      border-radius:999px;
+      background: linear-gradient(90deg,var(--accent), #7a9cff);
+      color:white;
+      font-weight:700;
+      font-size:18px;
+      text-decoration:none;
+      box-shadow: 0 10px 30px rgba(43,108,204,0.18);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .enter-btn:hover{ transform: translateY(-3px); box-shadow: 0 18px 40px rgba(43,108,204,0.22); }
+
+    /* small responsive tweak */
+    @media (max-width:600px){
+      .landing-title{font-size:26px}
+      .landing-slogan{font-size:14px}
+      .enter-btn{padding:12px 36px;font-size:16px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="landing-wrap">
+    <!-- logo.png 尽量上传为方形透明背景图；CSS 会把它显示为圆 -->
+    <img src="assets/img/logo.png" alt="logo" class="landing-logo" />
+
+    <!-- EXACT title text you demanded -->
+    <div class="landing-title">Campus Secondhand Book Trading Platform</div>
+    <div class="landing-slogan">Let every book be read again.</div>
+
+    <a class="enter-btn" href="home.html" role="button" aria-label="Enter site">Enter</a>
+  </div>
+</body>
+</html>
