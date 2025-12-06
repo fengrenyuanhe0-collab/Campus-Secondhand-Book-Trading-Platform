@@ -1,0 +1,14 @@
+{
+  "messages": [
+    {
+      "from": "user",
+      "text": "Hi! Is this book still available?",
+      "time": "2025-01-01 12:00"
+    },
+    {
+      "from": "seller",
+      "text": "Yes, it is!",
+      "time": "2025-01-01 12:01"
+    }
+  ]
+}

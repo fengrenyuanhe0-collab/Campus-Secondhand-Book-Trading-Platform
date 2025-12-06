@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Profile — Campus Secondhand Book Trading Platform</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-left">
+    <a href="home.html"><img src="assets/img/logo.png" class="logo" alt="logo"></a>
+    <div class="site-title">Campus Secondhand Book Trading Platform</div>
+  </div>
+  <div class="header-right">
+    <a href="home.html" class="btn-outline">Home</a>
+  </div>
+</header>
+
+<main class="page">
+  <div class="profile">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;align-items:center;gap:12px">
+        <div style="width:84px;height:84px;border-radius:12px;background:#e8f1ff;display:flex;align-items:center;justify-content:center;font-weight:800;color:#07366b">U</div>
+        <div>
+          <h3 id="profileName">Demo User</h3>
+          <div class="muted" id="profileSchool">School: URFU</div>
+        </div>
+      </div>
+      <div><a href="sell.html" class="btn-solid">Sell / Donate</a></div>
+    </div>
+
+    <div style="margin-top:18px">
+      <h4>My listings</h4>
+      <div id="myListings" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">© Campus Secondhand Book Trading Platform</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // 你要展示的3本书
+  const myBooks = [
+    {
+      id: 1,
+      cover: "assets/img/covers/校园二手书交易平台开发 (1).png"
+    },
+    {
+      id: 2,
+      cover: "assets/img/covers/校园二手书交易平台开发 (2).png"
+    },
+    {
+      id: 3,
+      cover: "assets/img/covers/校园二手书交易平台开发 (3).png"
+    }
+  ];
+
+  const listEl = document.getElementById("myListings");
+  listEl.innerHTML = ""; // 清空避免重复渲染
+
+  myBooks.forEach(book => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.cursor = "pointer";
+    card.onclick = () => location.href = `detail.html?id=${book.id}`;
+
+    card.innerHTML = `
+  <div class="cover" style="
+     background-image:url('${book.cover}');
+  "></div>
+`;
+
+
+    listEl.appendChild(card);
+  });
+
+});
+</script>
+
+
+</body>
+</html>

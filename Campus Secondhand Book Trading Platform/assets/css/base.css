@@ -1,0 +1,13 @@
+:root{
+  --bg:#f5f8ff; --card:#ffffff; --muted:#6b7280; --accent:#2b6cff;
+  --accent-2:#60a5fa; --btn:#ffd44d; --btn-text:#1f3a93;
+  --radius:12px; --shadow: 0 8px 20px rgba(2,6,23,0.06);
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:#0f172a;font-size:16px;line-height:1.4}
+
+.hidden{display:none}
+.spacer{flex:1}

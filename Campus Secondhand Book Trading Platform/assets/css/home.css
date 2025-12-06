@@ -1,0 +1,22 @@
+.filters{display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.layout{
+  display:grid;grid-template-columns:220px 1fr 300px;
+  gap:18px;align-items:start;max-width:1200px;margin:0 auto;
+}
+.left-cats{display:flex;flex-direction:column;gap:8px}
+.cat{
+  background:#e8f1ff;padding:10px;border-radius:8px;cursor:pointer;
+  border:1px solid rgba(43,108,204,0.08);
+  color:#07366b;font-weight:700;
+}
+.right-ad .poster{width:100%;border-radius:10px;box-shadow:var(--shadow)}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.card{
+  background:var(--card);border-radius:12px;padding:6px;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;
+  gap:10px;cursor:pointer;align-items:center;
+}
+.cover{
+  width:140px;height:200px;border-radius:6px;background:#e6e6e6;
+  background-size:cover;background-position:center;
+}

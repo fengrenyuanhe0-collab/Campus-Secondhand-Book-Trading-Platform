@@ -1,0 +1,124 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Home — Campus Used Book Exchange</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-left">
+    <img src="assets/img/logo.png" class="logo" alt="logo">
+    <div class="site-title">Campus Secondhand Book Trading Platform</div>
+  </div>
+  <div class="header-center">
+    <input id="searchInput" class="search" placeholder="Search by title, author, ISBN or course">
+  </div>
+  <div class="header-right">
+    <button id="loginBtn" class="btn-outline">Login</button>
+    <button id="toProfile" class="btn-solid">Profile</button>
+  </div>
+</header>
+
+<main class="page">
+    <section class="filters">
+    <select id="filterSchool">
+      <option value="">All Schools</option>
+      <option value="UniA">University A</option>
+      <option value="UniB">University B</option>
+    </select>
+
+    <select id="filterCollege">
+      <option value="">All Colleges</option>
+      <option value="CS">College of Computer Science</option>
+      <option value="Math">College of Mathematics</option>
+      <option value="Arts">College of Arts</option>
+    </select>
+
+    <select id="filterMajor">
+      <option value="">All Majors</option>
+      <option value="SE">Software Engineering</option>
+      <option value="Math">Applied Mathematics</option>
+      <option value="Finance">Finance</option>
+    </select>
+
+    <select id="filterGrade">
+      <option value="">All Grades</option>
+      <option value="1">Freshman</option>
+      <option value="2">Sophomore</option>
+      <option value="3">Junior</option>
+      <option value="4">Senior</option>
+    </select>
+
+    <select id="filterCourse">
+      <option value="">All Courses</option>
+      <option value="calculus">Calculus</option>
+      <option value="lin-algebra">Linear Algebra</option>
+      <option value="data-structure">Data Structures</option>
+    </select>
+  </section>
+<section class="layout">
+
+   <aside class="left-cats">
+    <div class="cat">Arts & Humanities</div>
+    <div class="cat">Business & Management</div>
+    <div class="cat">Computer Science & IT</div>
+    <div class="cat">Mathematics & Statistics</div>
+    <div class="cat">Engineering</div>
+    <div class="cat">Education</div>
+    <div class="cat">Social Sciences</div>
+    <div class="cat">Natural Sciences</div>
+    <div class="cat">Health & Medicine</div>
+</aside>
+
+
+    <section class="content">
+      <div class="grid" id="grid">
+        <!-- 10 reserved covers -->
+        <div class="card" onclick="location.href='detail.html?id=1'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(1\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=2'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(2\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=3'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(3\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=4'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(4\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=5'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(5\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=6'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(6\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=7'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(7\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=8'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(8\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=9'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(9\).png')"></div></div>
+        <div class="card" onclick="location.href='detail.html?id=10'"><div class="cover" style="background-image:url('assets/img/covers/校园二手书交易平台开发\ \(10\).png')"></div></div>
+      </div>
+    </section>
+
+    <aside class="right-ad">
+      <img src="assets/img/poster.png" class="poster" alt="poster">
+      <div class="ad-caption">Ad / Announcement</div>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">© Campus Used Book Exchange</footer>
+
+<!-- Login modal (non-blocking) -->
+<div id="authModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose">✕</button>
+    <h3 id="modalTitle">Login</h3>
+    <form id="authForm">
+      <label>Email<input id="authEmail" type="email"></label>
+      <label>Password<input id="authPassword" type="password"></label>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <button type="submit" class="btn-solid">Sign In</button>
+        <button type="button" id="modalRegister" class="btn-outline">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

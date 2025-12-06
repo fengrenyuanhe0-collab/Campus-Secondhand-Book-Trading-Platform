@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Sell / Donate — Campus Used Book Exchange</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-left">
+    <a href="home.html"><img src="assets/img/logo.png" class="logo" alt="logo"></a>
+    <div class="site-title">Campus Used Book Exchange</div>
+  </div>
+  <div class="header-right">
+    <a href="profile.html" class="btn-outline">Profile</a>
+  </div>
+</header>
+
+<main class="sell-form">
+  <h2>Sell or Donate a Book</h2>
+  <form id="sellForm">
+    <div class="form-row">
+      <div>
+        <label>Title<input class="input" id="title" required></label>
+      </div>
+      <div>
+        <label>Author<input class="input" id="author" required></label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>School
+          <select class="input" id="schoolField"></select>
+        </label>
+      </div>
+      <div>
+        <label>Program / Major
+          <select class="input" id="programField"></select>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Grade
+          <select class="input" id="gradeField"></select>
+        </label>
+      </div>
+      <div>
+        <label>Course
+          <input class="input" id="courseField" placeholder="Optional">
+        </label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <label>Subject
+          <select class="input" id="subjectField">
+            <option>Math</option>
+            <option>Computer Science</option>
+            <option>Economics</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <label>Condition
+          <select class="input" id="conditionField">
+            <option>Like New</option>
+            <option>Good</option>
+            <option>Used</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div><label>Price (leave blank to donate)<input class="input" id="price" type="number"></label></div>
+      <div><label>Year<input class="input" id="year" type="number"></label></div>
+    </div>
+
+    <div class="form-row-full">
+      <label>Description<textarea id="desc" class="input" rows="4"></textarea></label>
+    </div>
+
+    <div class="form-row-full">
+      <label>Cover Image<input id="coverUpload" type="file" accept="image/*"></label>
+    </div>
+
+    <div style="display:flex;gap:12px">
+      <button type="submit" class="btn-solid">Submit</button>
+      <a href="profile.html" class="btn-outline">Cancel</a>
+    </div>
+  </form>
+</main>
+
+<footer class="site-footer">© Campus Used Book Exchange</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  // 动态填充学校、专业、年级
+  const schools = ['Example University','City College','State Institute'];
+  const programs = ['CS','Math','Economics','Engineering','Arts'];
+  const grades = ['1','2','3','4'];
+
+  function fillSelect(id, arr){
+    const el = document.getElementById(id);
+    if(!el) return;
+    arr.forEach(a => {
+      el.appendChild(Object.assign(document.createElement('option'), { value: a, textContent: a }));
+    });
+  }
+
+  fillSelect('schoolField', schools);
+  fillSelect('programField', programs);
+  fillSelect('gradeField', grades);
+
+  // 封面选择提示
+  const coverUpload = document.getElementById('coverUpload');
+  if(coverUpload){
+    coverUpload.addEventListener('change', (e)=> {
+      const f = e.target.files[0];
+      if(f) alert('Selected cover: ' + f.name);
+    });
+  }
+
+  // 表单提交
+  const sellForm = document.getElementById('sellForm');
+  if(sellForm){
+    sellForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = {
+        title: document.getElementById('title').value,
+        author: document.getElementById('author').value,
+        school: document.getElementById('schoolField').value,
+        program: document.getElementById('programField').value,
+        grade: document.getElementById('gradeField').value,
+        course: document.getElementById('courseField').value,
+        subject: document.getElementById('subjectField').value,
+        condition: document.getElementById('conditionField').value,
+        price: document.getElementById('price').value,
+        year: document.getElementById('year').value,
+        description: document.getElementById('desc').value,
+        cover: coverUpload.files[0] ? coverUpload.files[0].name : ''
+      };
+      console.log('Book data:', data);
+      alert('Book submitted successfully!');
+      sellForm.reset();
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>

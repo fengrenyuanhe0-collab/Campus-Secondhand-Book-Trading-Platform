@@ -1,0 +1,14 @@
+{
+  "books": [
+    { "id": 1, "title": "Book 1", "price": 10, "cover": "assets/img/covers/1.png" },
+    { "id": 2, "title": "Book 2", "price": 15, "cover": "assets/img/covers/2.jpg" },
+    { "id": 3, "title": "Book 3", "price": 20, "cover": "assets/img/covers/3.jpg" },
+    { "id": 4, "title": "Book 4", "price": 12, "cover": "assets/img/covers/4.jpg" },
+    { "id": 5, "title": "Book 5", "price": 18, "cover": "assets/img/covers/5.jpg" },
+    { "id": 6, "title": "Book 6", "price": 22, "cover": "assets/img/covers/6.jpg" },
+    { "id": 7, "title": "Book 7", "price": 25, "cover": "assets/img/covers/7.jpg" },
+    { "id": 8, "title": "Book 8", "price": 16, "cover": "assets/img/covers/8.jpg" },
+    { "id": 9, "title": "Book 9", "price": 14, "cover": "assets/img/covers/9.jpg" },
+    { "id": 10, "title": "Book 10", "price": 30, "cover": "assets/img/covers/10.jpg" }
+  ]
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Chat — Campus Secondhand Book Trading Platform</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-left">
+    <a href="home.html"><img src="assets/img/logo.png" class="logo" alt="logo"></a>
+    <div class="site-title">Campus Used Book Exchange</div>
+  </div>
+  <div class="header-right">
+    <a href="profile.html" class="btn-outline">Profile</a>
+  </div>
+</header>
+
+<main class="chat-page">
+  <div class="chat-list">
+    <h4>Chats</h4>
+    <div class="small muted">Demo chat list — select a conversation to start</div>
+  </div>
+
+  <div class="chat-window">
+    <div class="messages" id="messages">
+      <div class="msg them">Hi — I'm selling the book at Library Main Hall</div>
+      <div class="msg me">Sounds good. How much?</div>
+    </div>
+
+    <div class="chat-input">
+      <input id="chatInput" placeholder="Type a message...">
+      <button id="sendBtn" class="btn-solid">Send</button>
+    </div>
+
+    <div style="margin-top:8px;display:flex;gap:8px">
+      <button class="btn-outline" onclick="sendQuick('Library Main Gate')">Library Main Gate</button>
+      <button class="btn-outline" onclick="sendQuick('Dorm Lobby')">Dorm Lobby</button>
+      <button class="btn-outline" onclick="sendQuick('Pay in cash')">Pay in cash</button>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">© Campus Used Book Exchange</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
